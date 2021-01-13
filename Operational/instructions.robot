@@ -16,6 +16,7 @@ Login with valid user
     Wait Until Element Is Visible  ${un}
     Input Text  ${un}  ${mob}
     Input Text  ${pwd}  ${pass}
+    capture page screenshot  D:/VS_Code_Moolya/RF_Flipkart/Screenshots/loginpage.png
     Click Element  ${login}
     Log to Console  Step 2 done
 
@@ -48,6 +49,7 @@ Click on 'Smart Watches' sub category
         Exit For Loop If  '${dynamic_subcateg_name}' == '${Expected_subcategory}'
     END
     Set Test Variable  ${static_subcateg_name}  xpath=(//div/a[@class='_2SqgSY'])[${j}]
+    capture page screenshot  D:/VS_Code_Moolya/RF_Flipkart/Screenshots/smart_watches.png
     Log to Console  step 5 done
 
 Click on 'smart watch'
@@ -60,12 +62,14 @@ Click on 'fossil 4th gen Watch'
     Click Element  ${fossil_subcateg}
     sleep  2s
     Click Element  ${watch}
+    capture page screenshot  D:/VS_Code_Moolya/RF_Flipkart/Screenshots/fossil_4th_gen.png
     Log to Console  step 7 done
     
 Add product to 'My cart'
     Switch Window  NEW
     Click Element  ${add-to-cart}
     sleep  2s
+    capture page screenshot  D:/VS_Code_Moolya/RF_Flipkart/Screenshots/mycart.png
     Log to Console  Step 8 is done
 
 Verify product in cart
