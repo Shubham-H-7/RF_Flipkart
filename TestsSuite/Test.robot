@@ -11,5 +11,6 @@ User should be able to add product to cart
     Click on 'Smart Wearable Tech' sub category
     Click on 'Smart Watches' sub category
     Click on 'smart watch'
-    Click on 'realme Watch S'
+    Click on 'fossil 4th gen Watch'
     Add product to 'My cart'
+    Verify product in cart
