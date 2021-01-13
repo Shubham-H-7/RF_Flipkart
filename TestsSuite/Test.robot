@@ -11,3 +11,5 @@ User should be able to add product to cart
     Click on 'Smart Wearable Tech' sub category
     Click on 'Smart Watches' sub category
     Click on 'smart watch'
+    Click on 'realme Watch S'
+    Add product to 'My cart'

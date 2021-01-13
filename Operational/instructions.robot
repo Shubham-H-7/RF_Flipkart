@@ -54,6 +54,18 @@ Click on 'smart watch'
     Click Element  ${static_subcateg_name}
     Log to Console  step 6 done
 
+Click on 'realme Watch S'
+    Execute Javascript  window.scrollTo(0,300)
+    Wait Until Element Is Visible  ${Realme-watch-S}
+    Click Element  ${Realme-watch-S}
+    Log to Console  step 7 done
+
+Add product to 'My cart'
+    Switch Window  NEW
+    Click Element  ${add-to-cart}
+    sleep  2s
+    Log to Console  Step 8 is done
+
 Verify WebPage title
     [Arguments]  ${title_n}
     Wait Until Page Contains  ${title_n}
