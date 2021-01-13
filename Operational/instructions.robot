@@ -21,6 +21,7 @@ Login with valid user
 
 Go to 'Electronics' section
     sleep  3s
+    Wait Until Element Is Visible  ${Electronics}
     Mouse Over  ${Electronics}
     ${category_count} =  Get Element Count  xpath=//a[@class='_3QN6WI _1MMnri _32YDvl']
     sleep  2s
@@ -35,6 +36,23 @@ Go to 'Electronics' section
 Click on 'Smart Wearable Tech' sub category
     Click Element  ${static_categ_name}
     Log to Console  Step 4 done
+
+Click on 'Smart Watches' sub category   
+    Wait Until Element Is Visible  ${subcategory_wearable}
+    ${subcategory_count} =  Get Element Count  xpath=//div/a[@class='_2SqgSY']
+    Log to Console  ${subcategory_count}
+    sleep  2s
+    FOR  ${j}  IN RANGE  1  ${subcategory_count}
+        ${dynamic_subcateg_name} =  Get Text  xpath=(//div/a[@class='_2SqgSY'])[${j}]
+        Log to Console  ${dynamic_subcateg_name}
+        Exit For Loop If  '${dynamic_subcateg_name}' == '${Expected_subcategory}'
+    END
+    Set Test Variable  ${static_subcateg_name}  xpath=(//div/a[@class='_2SqgSY'])[${j}]
+    Log to Console  step 5 done
+
+Click on 'smart watch'
+    Click Element  ${static_subcateg_name}
+    Log to Console  step 6 done
 
 Verify WebPage title
     [Arguments]  ${title_n}

@@ -9,4 +9,5 @@ User should be able to add product to cart
     Login with valid user
     Go to 'Electronics' section
     Click on 'Smart Wearable Tech' sub category
-    
+    Click on 'Smart Watches' sub category
+    Click on 'smart watch'
